@@ -1,0 +1,12 @@
+/* converted on Wed Jul 15, 2026, 16:22 (UTC+03) by antlr_3-to-w3c v0.73 which is Copyright (c) 2011-2026 by Gunther Rademacher <grd@gmx.net> */
+
+block    ::= stmt
+           | '{' stmt* '}'
+stmt     ::= ( expr | 'do' block 'while' '(' expr ')' ) ';'
+           | ( ( 'if' | 'while' ) '(' expr ')' )? block
+expr     ::= ID
+           | CONST
+           | expr ( '+' | '-' | '*' ) expr
+
+<?TOKENS?>
+
